@@ -1,0 +1,46 @@
+{
+  "DistributionConfig": {
+    "CallerReference": "my-distribution-unique-id",
+    "Comment": "S3Bucekt r-commerce",
+    "Enabled": true,
+    "Origins": {
+      "Quantity": 1,
+      "Items": [
+        {
+          "Id": "S3 Bucket e-commerce",
+          "DomainName": "S3Bucekt r-commerce.s3.amazonaws.com",
+          "S3OriginConfig": {
+            "OriginAccessIdentity": ""
+          }
+        }
+      ]
+    },
+    "DefaultCacheBehavior": {
+      "TargetOriginId": "S3Bucekt r-commerce",
+      "ViewerProtocolPolicy": "redirect-to-https",
+      "AllowedMethods": {
+        "Quantity": 2,
+        "Items": [
+          "HEAD",
+          "GET"
+        ],
+        "CachedMethods": {
+          "Quantity": 2,
+          "Items": [
+            "HEAD",
+            "GET"
+          ]
+        }
+      },
+      "ForwardedValues": {
+        "QueryString": false,
+        "Cookies": {
+          "Forward": "none"
+        }
+      },
+      "MinTTL": 0,
+      "DefaultTTL": 86400,
+      "MaxTTL": 31536000
+    }
+  }
+}
