@@ -1,0 +1,17 @@
+aws-scalable-ecommerce-app/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── infrastructure/
+│   ├── cloudformation-template.yml
+│   └── cloudfront-distribution.json
+├── src/
+│   ├── index.html
+│   ├── style.css
+│   └── app.js
+├── test/
+│   └── load_test.jmx
+├── docs/
+│   ├── architecture-diagram.png
+│   └── readme.md
+└── README.md
